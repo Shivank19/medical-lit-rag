@@ -217,4 +217,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-data/*
+data/*.json
+embeddings/*
+!embeddings/.gitkeep
+!data/.gitkeep
+scratch.py
