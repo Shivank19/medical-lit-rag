@@ -222,3 +222,5 @@ embeddings/*
 !embeddings/.gitkeep
 !data/.gitkeep
 scratch.py
+evaluation/*
+!evaluation/.gitkeep

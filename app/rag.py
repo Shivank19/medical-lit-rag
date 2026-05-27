@@ -31,8 +31,10 @@ def build_prompt(question, chunks):
     return f"{instruction}\n\nSources:\n{sources}\n\nQuestion: {question}\n\nAnswer:"
     
 def call_llm(groq_client, prompt):
+    # llama 8b for experimentation as it uses less tokens and has more available tokens overall via groq, but can switch to 70b for final evaluation
     response = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        # model="llama-3.3-70b-versatile",
+        model="llama-3.1-8b-instant",
         messages = [{"role": "user", "content": prompt}],
         temperature=0.1,
         max_tokens=1000
